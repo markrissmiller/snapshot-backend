@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
     res.send('hello api');
 })
 
-const CONNECTION_URL = 'mongodb+srv://markrissmiller:casatheatre2013@sei.wmfss.mongodb.net/memories?retryWrites=true&w=majority';
+
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true})
@@ -29,3 +29,4 @@ mongoose.connect(process.env.CONNECTION_URL, { useNewUrlParser: true, useUnified
 
 mongoose.set('useFindAndModify', false)
 
+app.listen(PORT)
